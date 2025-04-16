@@ -1,0 +1,309 @@
+/* Styles spécifiques pour la page sur l'esclavage transsaharien */
+
+/* Couleurs thématiques */
+:root {
+    --esclavage-primary: #1a365d;
+    --esclavage-secondary: #2a4a7f;
+    --esclavage-accent: #c19a6b;
+    --esclavage-light: #e6e6e6;
+    --esclavage-dark: #333;
+}
+
+/* Bannière thématique */
+.esclavage-banner {
+    background: linear-gradient(rgba(26, 54, 93, 0.8), rgba(26, 54, 93, 0.9)), url('../images/sahara-background.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.esclavage-banner h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.esclavage-banner p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Navigation latérale */
+.sidebar .theme-nav ul li a:hover,
+.sidebar .theme-nav ul li a:focus,
+.sidebar .theme-nav ul li a.active {
+    background-color: var(--esclavage-primary);
+    color: white;
+}
+
+/* Sections de contenu */
+.section {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #eee;
+}
+
+.section:last-child {
+    border-bottom: none;
+}
+
+.section h2 {
+    color: var(--esclavage-primary);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--esclavage-accent);
+}
+
+.section h3 {
+    color: var(--esclavage-secondary);
+    font-size: 1.5rem;
+    margin: 1.5rem 0 1rem;
+}
+
+.section-content {
+    line-height: 1.6;
+}
+
+/* Boîtes d'information et citations */
+.info-box, .quote-box {
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+    border-radius: 5px;
+}
+
+.info-box {
+    background-color: rgba(26, 54, 93, 0.1);
+    border-left: 4px solid var(--esclavage-primary);
+}
+
+.info-box h4 {
+    color: var(--esclavage-primary);
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.info-box ul {
+    margin: 0.5rem 0;
+    padding-left: 1.5rem;
+}
+
+.quote-box {
+    background-color: rgba(193, 154, 107, 0.1);
+    border-left: 4px solid var(--esclavage-accent);
+}
+
+.quote-box blockquote {
+    margin: 0;
+    font-style: italic;
+}
+
+.quote-box cite {
+    display: block;
+    margin-top: 0.5rem;
+    font-style: normal;
+    font-weight: bold;
+    text-align: right;
+}
+
+/* Quiz interactif */
+.quiz-container {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.quiz-question {
+    margin-bottom: 2rem;
+}
+
+.quiz-question h3 {
+    color: var(--esclavage-primary);
+    margin-bottom: 1rem;
+}
+
+.quiz-options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.quiz-option {
+    padding: 1rem;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.quiz-option:hover {
+    background-color: #f0f0f0;
+}
+
+.quiz-option span {
+    font-weight: bold;
+    margin-right: 0.5rem;
+    color: var(--esclavage-primary);
+}
+
+.quiz-option.correct {
+    background-color: rgba(76, 175, 80, 0.2);
+    border-color: #4CAF50;
+}
+
+.quiz-option.incorrect {
+    background-color: rgba(244, 67, 54, 0.2);
+    border-color: #F44336;
+}
+
+.quiz-feedback {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 5px;
+    display: none;
+}
+
+.quiz-feedback.correct {
+    background-color: rgba(76, 175, 80, 0.1);
+    border: 1px solid #4CAF50;
+    color: #2E7D32;
+}
+
+.quiz-feedback.incorrect {
+    background-color: rgba(244, 67, 54, 0.1);
+    border: 1px solid #F44336;
+    color: #C62828;
+}
+
+.quiz-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.quiz-navigation button {
+    padding: 0.8rem 1.5rem;
+    background-color: var(--esclavage-primary);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.quiz-navigation button:hover {
+    background-color: var(--esclavage-secondary);
+}
+
+.quiz-navigation button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+#quiz-results {
+    text-align: center;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+#quiz-results h3 {
+    color: var(--esclavage-primary);
+}
+
+#quiz-results button {
+    margin-top: 1rem;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--esclavage-primary);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Liste de ressources */
+.resources-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.resources-list li {
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.resources-list li:before {
+    content: "•";
+    color: var(--esclavage-accent);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.resources-list a {
+    color: var(--esclavage-secondary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.resources-list a:hover {
+    color: var(--esclavage-primary);
+    text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .esclavage-banner {
+        padding: 3rem 1rem;
+    }
+    
+    .esclavage-banner h1 {
+        font-size: 2rem;
+    }
+    
+    .section h2 {
+        font-size: 1.8rem;
+    }
+    
+    .section h3 {
+        font-size: 1.3rem;
+    }
+    
+    .quiz-container {
+        padding: 1.5rem;
+    }
+    
+    .quiz-option {
+        padding: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .esclavage-banner h1 {
+        font-size: 1.8rem;
+    }
+    
+    .esclavage-banner p {
+        font-size: 1rem;
+    }
+    
+    .section h2 {
+        font-size: 1.5rem;
+    }
+    
+    .section h3 {
+        font-size: 1.2rem;
+    }
+    
+    .quiz-navigation {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
